@@ -24,7 +24,7 @@ public class Panel {
                 double num1 = Double.parseDouble(PrimerNumero.getText());
                 double num2 = Double.parseDouble(SegundoNumero.getText());
                 double sum = num1 + num2;
-                Resultado.setText(sum);
+                Resultado.setText(String.valueOf(sum));
 
             }
         });
@@ -34,7 +34,7 @@ public class Panel {
                 double num1 = Double.parseDouble(PrimerNumero.getText());
                 double num2 = Double.parseDouble(SegundoNumero.getText());
                 double res = num1 - num2;
-                resultado.setText(res);
+                Resultado.setText(String.valueOf(res));
             }
         });
         JButDividir.addActionListener(new ActionListener() {
@@ -44,32 +44,32 @@ public class Panel {
                 double num2 = Double.parseDouble(SegundoNumero.getText());
                 if (num2 != 0) {
                     double div = num1 / num2;
-                    resultado.setText(div);
+                    Resultado.setText(String.valueOf(div));
                 } else {
-                    resultado.setText("No se puede dividir por 0");
+                    Resultado.setText("No se puede dividir por 0");
+
+                    {
+                        Resultado.setText("Por favor ingresa números válidos");
+                    }
+
+
                 }
-            } catch(
-            NumberFormatException ex)
+                JButMultiplicar.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        double num1 = Double.parseDouble(PrimerNumero.getText());
+                        double num2 = Double.parseDouble(SegundoNumero.getText());
+                        double mult = num1 * num2;
+                        Resultado.setText(String.valueOf(mult));
+                    }
 
-            {
-                resultado.setText("Por favor ingresa números válidos");
+                });
             }
-
-
-        });
-        JButMultiplicar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                double num1 = Double.parseDouble(campo1.getText());
-                double num2 = Double.parseDouble(campo2.getText());
-                double mult = num1 * num2;
-                resultado.setText(mult);
-            } catch (NumberFormatException ex) {
-                resultado.setText("Por favor ingresa números válidos");
-            }
-            }
-        });
-
+        }
     }
 
 
+
+
+
+;
