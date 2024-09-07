@@ -62,7 +62,7 @@ public class Panel {
                         double mult = num1 * num2;
                         Resultado.setText(String.valueOf(mult));
                     }
-//ALEJANDRO
+//ALEJANDROO
                 });
             }
         }
